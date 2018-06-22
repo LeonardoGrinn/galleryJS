@@ -54,7 +54,6 @@ let changeVisorImg = e => {
     imageIndex = thisImageIndex; //Change the global value of the imageIndex.
 
     displayImg.querySelector('.visor__img').src = newImg; //Replace the image src for the new one.
-    /**/
 }
 
 /* Start Full View Gallery */
@@ -92,10 +91,3 @@ document.querySelectorAll('.arrows').forEach( e => {
 /* Call Full View Gallery Controller */
 document.querySelector('.gallery__visor .visor__img').addEventListener('click', fullView);
 document.querySelector('.close').addEventListener('click', closeFullView); //Call close full view function. 
-
-
-/* Display Transition Experiment
-displayImg.classList.toggle('transition');
-*/
-/* Another way */
-//displayImg.style.animation = 'delay 1s ease';
