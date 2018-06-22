@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Galeria V1</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="gallery__container">
+    <div class="gallery__visor"> <!-- Principal image displayer -->
+
+        <!-- Expand btn 
+        <img src="assets/img/ui-gallery/expand.svg" alt="expand button" class="ui-icons expand">
+        -->
+        <!-- Preview btn -->
+        <img src="assets/img/ui-gallery/back.svg" data-direction="left" alt="left-controller" class="ui-icons arrows arrow__preview">
+
+        <!-- Image Displayer -->
+        <img class="visor__img transition-fadeIn" src="assets/img/1.png" alt="zorro-1">
+
+        <!-- Next btn -->
+        <img src="assets/img/ui-gallery/next.svg" data-direction="right" alt="right-controller" class="ui-icons arrows arrow__next">
+
+    </div> <!-- ./ Principal image displayer -->
+    <div class="gallery__thumbnail"> <!-- Gallery Thumbnails -->
+        <div class="gallery__item"> <!-- item 1-->
+            <img class="active" src="assets/img/1.png" alt="zorro-1" data-index="0">
+        </div>
+
+        <div class="gallery__item"><!-- item 2 -->
+            <img src="assets/img/2.png" alt="zorro-2" data-index="1">
+        </div>
+
+        <div class="gallery__item"> <!-- item 3 -->
+            <img src="assets/img/3.png" alt="zorro-3" data-index="2">
+        </div>
+
+        <div class="gallery__item"> <!-- item 4 -->
+            <img src="assets/img/4.png" alt="zorro-4" data-index="3">
+        </div>
+
+        <div class="gallery__item"> <!-- item 5 -->
+            <img src="assets/img/5.png" alt="zorro-5" data-index="4">
+        </div>
+
+        <div class="gallery__item"> <!-- item 6 -->
+            <img src="assets/img/6.png" alt="zorro-6" data-index="5">
+        </div>
+
+        <div class="gallery__item"> <!-- item 7 -->
+            <img src="assets/img/7.png" alt="zorro-7" data-index="6">
+        </div>
+        
+        <div class="gallery__item"> <!-- item 8 -->
+            <img src="assets/img/8.png" alt="zorro-8" data-index="7">
+        </div>
+    </div> <!-- ./Gallery Thumbnails -->
+
+    
+    <div class="full__view transition-fadeIn"> <!-- Full View Gallery -->
+        <div class="full__container"> <!-- Full view displayer -->
+
+            <!-- Close btn -->
+            <img src="assets/img/ui-gallery/close.svg" alt="close button" class="close">
+
+            <!-- Preview btn -->
+            <img src="assets/img/ui-gallery/back.svg" data-direction="left" alt="left-controller" class="arrows arrow__preview">
+
+            <!-- Image Displayer -->
+            <img class="visor__img transition-fadeIn" src="assets/img/1.png" alt="zorro-1">
+
+            <!-- Next btn -->
+            <img src="assets/img/ui-gallery/next.svg" data-direction="right" alt="right-controller" class="arrows arrow__next">
+        </div> <!-- ./ Full view displayer -->
+    </div> <!-- ./ Full View Gallery -->
+    
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+</html>
+

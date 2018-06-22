@@ -1,0 +1,195 @@
+/* ============= G E N E R A L ============= */
+* {
+    outline: none;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+/**/
+
+.gallery__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: black;
+}
+/* ============= G A L L E R Y  T H U M B N A I L ============= */
+.gallery__thumbnail {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 3%;
+}
+
+.gallery__item {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+    /* align vertical */
+    transition: all 1s;  
+}
+
+.gallery__item > img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all ease 1s;
+    margin-top: 2.5%; /* Quick fix to align thumnail & displayer */
+    cursor: pointer;
+}
+
+.gallery__item > img:hover,
+.gallery__item > img.active {
+    filter: grayscale(0%);
+}
+
+.gallery__visor {
+    display: flex;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+    /* align vertical */
+}
+
+.visor__img {
+    width: 100%;
+    height: auto;
+    margin-top: 1%; /* Quick fix to align thumnail & displayer */
+    cursor: pointer;
+}
+
+.ui-icons {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.ui-icons:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+/*
+.expand {
+    width: 2vw;
+    position: absolute;
+    transform: translate(31.7vw, 17.7vw);  
+    padding: 0.3%;
+}
+*/
+
+.arrows {
+    width: 2vw;
+    padding: 0.5% 0;
+    z-index: 10;
+}
+
+.arrow__next {
+    transform: translateX(-100%);
+}
+
+.arrow__preview {
+    transform: translateX(100%);
+}
+
+/* ============= F U L L  V I E W ============= */
+.full__container {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    max-width: 100vw;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.full__view {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #000;
+    display: none;
+    z-index: 20;
+    transition: all 0.2s ease;
+}
+
+.full__view .visor__img {
+    width: 80vw;
+    height: auto;
+}
+
+.full__view .arrow__preview {
+    padding-left: 5vw;
+}
+
+.full__view .arrow__preview,
+.full__view .arrow__next {
+    width: 3vw;
+    transform: translate(0, 0);
+} 
+
+.full__view .arrow__next:hover {
+    transform: translateX(3px);
+}
+
+.full__view .arrow__preview:hover {
+    transform: translateX(-3px);
+}
+
+.full__view .arrows {
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.full__view .arrows:hover {
+    opacity: 1;
+}
+
+.close {
+    width: 2.5vw;
+    position: absolute;
+    top: 2.5vw;
+    right: 2.5vw;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/* ============= A N I M A T I O N S ============= */
+.transition-fadeIn {
+   animation: fadeIn 1s;
+}
+
+.transition-fadeInPersist {
+    animation: fadeInPersist 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInPersist {
+    to {
+        opacity: 1;
+    }
+
+    from {
+        opacity: 0;
+    }
+}
+
+
